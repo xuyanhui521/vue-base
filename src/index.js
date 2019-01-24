@@ -1,38 +1,21 @@
-
- import './css/61.less'
- import Vue from 'vue/dist/vue.js'
-Vue.component('my-login',{
-    created(){
-        console.log('created正在执行-------------')
-    },
-    template:`
-      <div>
-         <p>年后做{{info}}</p>
-         <p><button @click="changeName">改变</button></p>
-      </div>
-    `,
-    data(){
-        return {info:"朋友"  }
-    },
-    methods:{
-        changeName(){
-            console.log('改变')
-        }
-    }    
-   
-
-})
+ //import Vue from 'vue'
+import Vue from 'vue/dist/vue.js'
+//导入vue组件
+import MyPart1 from './components/简单应用.vue'
+import MyPart2 from './components/02.vue'
+Vue.component('my-part1',MyPart1)//全局组件
+Vue.component('my-part2',MyPart2)
 
 
-new Vue({
+const vm=new Vue({
     el:"#app",
     data:{
-        msg:"好好"
+        message:"study vue"
     },
     components:{
-        'my-logout':{
-            template:"<span>退出系统</span>"
-        }
+        'my-part1':MyPart1,//私有组件
+       
+       
     }
 
 })
