@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _022_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./022.vue */ \"./src/components/022.vue\");\n//\n//\n//\n//\n//\n//\n//\n//\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  data: function data() {\n    return {\n      msg: \"Hellow world !\",\n      Fcar: {\n        wheel: 4,\n        color: \"red\"\n      }\n    };\n  },\n  methods: {},\n  filters: {},\n  components: {\n    'my-part22': _022_vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n  },\n  created: function created() {},\n  mounted: function mounted() {}\n});\n\n//# sourceURL=webpack:///./src/components/02.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _022_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./022.vue */ \"./src/components/022.vue\");\n/* harmony import */ var _bus_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../bus.js */ \"./src/bus.js\");\n//\n//\n//\n//\n//\n//\n//\n//\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  data: function data() {\n    return {\n      msg: \"Hellow world !\",\n      Fcar: {\n        wheel: 4,\n        color: \"red\"\n      }\n    };\n  },\n  creadted: function creadted() {\n    var _this = this;\n\n    _bus_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].$on('bus_f1', function (data) {\n      _this.msg = data;\n      console.log('兄弟收到数据了' + data);\n    });\n  },\n  methods: {\n    getInfo: function getInfo(arg1, arg2) {\n      console.log('组件传递的参数为：', arg1, arg2);\n    }\n  },\n  filters: {},\n  components: {\n    'my-part22': _022_vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n  },\n  created: function created() {},\n  mounted: function mounted() {}\n});\n\n//# sourceURL=webpack:///./src/components/02.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _022
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  props: ['msg1', 'msg2', 'msg3'],\n  data: function data() {\n    return {\n      msg: \"022vue!\"\n    };\n  },\n  methods: {},\n  filters: {},\n  components: {},\n  created: function created() {},\n  mounted: function mounted() {}\n});\n\n//# sourceURL=webpack:///./src/components/022.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  props: ['msg1', 'msg2', 'msg3'],\n  data: function data() {\n    return {\n      flag: true,\n      msg: \"022vue!\",\n      msg11: this.msg1\n    };\n  },\n  methods: {\n    change: function change() {\n      this.flag = !this.flag;\n      this.msg11 = \"改变了\";\n    },\n    son: function son() {\n      this.$emit('getInfo', 'hellow', 'beijing');\n    }\n  },\n  filters: {},\n  components: {},\n  created: function created() {},\n  mounted: function mounted() {}\n});\n\n//# sourceURL=webpack:///./src/components/022.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -118,7 +118,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  data: function data() {\n    return {\n      msg: \"Hellow world !\"\n    };\n  },\n  methods: {},\n  filters: {},\n  components: {},\n  created: function created() {},\n  mounted: function mounted() {}\n});\n\n//# sourceURL=webpack:///./src/components/%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _bus_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../bus.js */ \"./src/bus.js\");\n//\n//\n//\n//\n//\n//\n//\n//\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  data: function data() {\n    return {\n      msg: \"Hellow world 简单应用!\"\n    };\n  },\n  methods: {\n    send1: function send1() {\n      _bus_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].$emit('bus_f1', this.msg);\n    }\n  },\n  filters: {},\n  components: {},\n  created: function created() {},\n  mounted: function mounted() {}\n});\n\n//# sourceURL=webpack:///./src/components/%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -263,7 +263,7 @@ eval("/* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    [\n      _c(\"p\", { staticClass: \"example\" }, [_vm._v(_vm._s(_vm.msg))]),\n      _vm._v(\" \"),\n      _c(\"my-part22\", { attrs: { msg1: \"hei\", msg2: \"mySon\", msg3: _vm.Fcar } })\n    ],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/components/02.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    [\n      _c(\"p\", { staticClass: \"example\" }, [_vm._v(_vm._s(_vm.msg))]),\n      _vm._v(\" \"),\n      _c(\"my-part22\", {\n        attrs: { msg1: \"hei\", msg3: _vm.Fcar },\n        on: { getInfo: _vm.getInfo }\n      })\n    ],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/components/02.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -275,7 +275,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"div\", [\n    _c(\"div\", { staticClass: \"e\" }, [_vm._v(_vm._s(_vm.msg1))]),\n    _vm._v(\" \"),\n    _c(\"h3\", [_vm._v(_vm._s(_vm.msg3))]),\n    _vm._v(\" \"),\n    _c(\"h2\", [_vm._v(_vm._s(_vm.msg1))]),\n    _vm._v(\" \"),\n    _c(\"h2\", [_vm._v(_vm._s(_vm.msg2))]),\n    _vm._v(\" \"),\n    _c(\"h2\", [_vm._v(_vm._s(_vm.msg3))])\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/components/022.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"div\", [\n    _c(\"div\", { staticClass: \"e\" }, [_vm._v(_vm._s(_vm.msg))]),\n    _vm._v(\" \"),\n    _c(\"h2\", [_vm._v(_vm._s(_vm.flag ? _vm.msg1 : _vm.msg11))]),\n    _vm._v(\" \"),\n    _c(\"h2\", [_vm._v(_vm._s(_vm.msg2))]),\n    _vm._v(\" \"),\n    _c(\"h2\", [_vm._v(_vm._s(_vm.msg3))]),\n    _vm._v(\" \"),\n    _c(\"p\", [\n      _c(\"button\", { on: { click: _vm.change } }, [\n        _vm._v(\"改变父级元素传递的参数\")\n      ])\n    ]),\n    _vm._v(\" \"),\n    _c(\"p\", [\n      _c(\"button\", { on: { click: _vm.son } }, [_vm._v(\"给父组件传递值\")])\n    ])\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/components/022.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -287,7 +287,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"div\", { staticClass: \"example\" }, [_vm._v(_vm._s(_vm.msg))])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/components/%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"div\", [\n    _c(\"div\", { staticClass: \"example\" }, [_vm._v(_vm._s(_vm.msg))]),\n    _vm._v(\" \"),\n    _c(\"p\", [\n      _c(\"button\", { on: { click: _vm.send1 } }, [_vm._v(\"给兄弟发信息\")])\n    ])\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/components/%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -322,6 +322,18 @@ eval("/* WEBPACK VAR INJECTION */(function(global, setImmediate) {/*!\n * Vue.js
 /***/ (function(module, exports) {
 
 eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn this;\n})();\n\ntry {\n\t// This works if eval is allowed (see CSP)\n\tg = g || new Function(\"return this\")();\n} catch (e) {\n\t// This works if the window reference is available\n\tif (typeof window === \"object\") g = window;\n}\n\n// g can still be undefined, but nothing to do about it...\n// We return undefined, instead of nothing here, so it's\n// easier to handle this case. if(!global) { ...}\n\nmodule.exports = g;\n\n\n//# sourceURL=webpack:///(webpack)/buildin/global.js?");
+
+/***/ }),
+
+/***/ "./src/bus.js":
+/*!********************!*\
+  !*** ./src/bus.js ***!
+  \********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue/dist/vue */ \"./node_modules/vue/dist/vue.js\");\n/* harmony import */ var vue_dist_vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_dist_vue__WEBPACK_IMPORTED_MODULE_0__);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (new vue_dist_vue__WEBPACK_IMPORTED_MODULE_0___default.a({}));\n\n//# sourceURL=webpack:///./src/bus.js?");
 
 /***/ }),
 
@@ -477,7 +489,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_dist_vue_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue/dist/vue.js */ \"./node_modules/vue/dist/vue.js\");\n/* harmony import */ var vue_dist_vue_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_dist_vue_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/简单应用.vue */ \"./src/components/简单应用.vue\");\n/* harmony import */ var _components_02_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/02.vue */ \"./src/components/02.vue\");\n//import Vue from 'vue'\n //导入vue组件\n\n\n\nvue_dist_vue_js__WEBPACK_IMPORTED_MODULE_0___default.a.component('my-part1', _components_vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\nvue_dist_vue_js__WEBPACK_IMPORTED_MODULE_0___default.a.component('my-part2', _components_02_vue__WEBPACK_IMPORTED_MODULE_2__[\"default\"]);\nvue_dist_vue_js__WEBPACK_IMPORTED_MODULE_0___default.a.component('my-com1', {});\nvue_dist_vue_js__WEBPACK_IMPORTED_MODULE_0___default.a.component('my-age', {});\nvar vm = new vue_dist_vue_js__WEBPACK_IMPORTED_MODULE_0___default.a({\n  el: \"#app\",\n  data: {\n    message: \"study vue\"\n  },\n  components: {\n    'my-part1': _components_vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n    'my-part2': _components_02_vue__WEBPACK_IMPORTED_MODULE_2__[\"default\"]\n  }\n});\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_dist_vue_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue/dist/vue.js */ \"./node_modules/vue/dist/vue.js\");\n/* harmony import */ var vue_dist_vue_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_dist_vue_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/简单应用.vue */ \"./src/components/简单应用.vue\");\n/* harmony import */ var _components_02_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/02.vue */ \"./src/components/02.vue\");\n//import Vue from 'vue'\n //导入vue组件\n\n\n\nvue_dist_vue_js__WEBPACK_IMPORTED_MODULE_0___default.a.component('my-part1', _components_vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"]); //全局组件\n\nvue_dist_vue_js__WEBPACK_IMPORTED_MODULE_0___default.a.component('my-part2', _components_02_vue__WEBPACK_IMPORTED_MODULE_2__[\"default\"]);\nvar vm = new vue_dist_vue_js__WEBPACK_IMPORTED_MODULE_0___default.a({\n  el: \"#app\",\n  data: {\n    message: \"study vue\"\n  },\n  components: {\n    'my-part1': _components_vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"] //私有组件\n\n  }\n});\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 

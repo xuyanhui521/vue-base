@@ -6,7 +6,7 @@
        <h2>{{msg2}}</h2>
        <h2>{{msg3}}</h2>
        <p><button @click="change">改变父级元素传递的参数</button></p>
-
+      <p><button @click="son">给父组件传递值</button></p>
    </div>
    
     
@@ -27,6 +27,9 @@
                 this.flag=!this.flag
                this.msg11="改变了"
                
+            },
+            son(){
+                this.$emit('getSonMsg','hellow','父亲')
             }
         },
         filters:{},

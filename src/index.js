@@ -14,6 +14,7 @@ const vm=new Vue({
     },
     components:{
         'my-part1':MyPart1,//私有组件
+        'my-part2':MyPart2,//私有组件
        
        
     }
