@@ -1,7 +1,8 @@
 
 import Vue from "vue/dist/vue.js"
 import MyRef from "./components/01-ref.vue"
-Vue.component("my-ref",MyRef)
+import App from "./components/03app.vue"
+const vm1=Vue.component("my-ref",MyRef)
  new Vue({
      el:"#app",
      data:{
@@ -9,5 +10,12 @@ Vue.component("my-ref",MyRef)
      },
      components:{
         
-     }
+     },
+    //  render:function(c){
+    //      return c(App)
+    //  },
+    //  render:c=>{
+    //      return c(App)
+    //  },
+      render:c=>c(App)
  })
