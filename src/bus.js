@@ -1,2 +1,2 @@
-import Vue from 'vue/dist/vue'
-export default new Vue()
+import Vue from 'vue/dist/vue.js'
+  export default new Vue()
